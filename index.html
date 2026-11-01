@@ -72,6 +72,13 @@
     <style>
         body {
             transition: background-color 0.3s ease, color 0.3s ease;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+        /* Prevent long words / URLs from breaking layout on small screens */
+        p, h1, h2, h3, li, span {
+            overflow-wrap: break-word;
         }
         .text-gradient {
             background: linear-gradient(to right, #2563eb, #22d3ee);
@@ -92,6 +99,15 @@
         .dark .glass {
             background: rgba(15, 23, 42, 0.6);
             border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        /* Respect users who prefer reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
         }
         .stagger-1 { animation-delay: 0.1s; }
         .stagger-2 { animation-delay: 0.2s; }

@@ -20,6 +20,14 @@ export interface AppLink {
   url: string;
 }
 
+export interface StoreApp {
+  name: string;
+  icon: string;
+  url: string;
+  store: 'App Store' | 'Play Store' | 'Mac App Store';
+  note?: string;
+}
+
 export interface SkillCategory {
   title: string;
   skills: string[];
@@ -45,4 +53,5 @@ export interface ResumeData {
   majorProjects: Project[];
   appLinks: AppLink[];
   strengths: string[];
+  iosApps: StoreApp[];
 }

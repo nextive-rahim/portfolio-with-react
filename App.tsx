@@ -175,60 +175,62 @@ const HeroSection = () => {
           </div>
 
           {/* Name */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-slide-up opacity-0 stagger-2 tracking-tighter leading-none">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-slide-up opacity-0 stagger-2 tracking-tight leading-[1.05]">
             <span className="text-slate-900 dark:text-white">Abdul</span>{' '}
             <span className="text-gradient">Rahim</span>
           </h1>
 
           {/* Title */}
           <p className="text-xl md:text-2xl text-slate-500 dark:text-slate-400 mb-6 animate-slide-up opacity-0 stagger-1">
-            <span className="text-blue-600 font-black uppercase tracking-tight">Flutter Developer</span> & 
-            <span className="text-cyan-500 font-black uppercase tracking-tight"> Backend Engineer</span>
+            <span className="text-blue-600 font-black tracking-tight">Flutter Developer</span>
+            <span className="mx-2.5 text-slate-400/70 font-light">&amp;</span>
+            <span className="text-cyan-500 font-black tracking-tight">Backend Engineer</span>
           </p>
 
           {/* Description */}
-          <p className="text-lg text-slate-500 dark:text-slate-400 max-w-2xl mx-auto mb-8 animate-slide-up opacity-0 stagger-2 leading-relaxed">
+          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-8 animate-slide-up opacity-0 stagger-2 leading-relaxed">
             5+ years building high-performance mobile apps with Flutter.
-            Delivered <span className="text-slate-900 dark:text-white font-black">40+ Android</span>,
-            <span className="text-slate-900 dark:text-white font-black">15+ iOS</span> &
-            <span className="text-slate-900 dark:text-white font-black">10+ macOS apps</span> to production.
+            Delivered <span className="text-slate-900 dark:text-white font-bold">40+ Android</span>,
+            <span className="text-slate-900 dark:text-white font-bold">15+ iOS</span>
+            <span className="mx-1.5 font-light">&amp;</span>
+            <span className="text-slate-900 dark:text-white font-bold">10+ macOS apps</span> to production.
           </p>
 
           {/* Stats */}
-          <div className="flex flex-wrap justify-center gap-8 mb-10 animate-slide-up opacity-0 stagger-3">
+          <div className="flex flex-wrap justify-center gap-x-10 gap-y-6 mb-10 animate-slide-up opacity-0 stagger-3">
             <div className="text-center group">
               <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform">5+</div>
-              <div className="text-[10px] font-black uppercase tracking-widest text-slate-500 mt-1">Experience</div>
+              <div className="text-xs font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1.5">Experience</div>
             </div>
             <div className="text-center group">
               <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform">40+</div>
-              <div className="text-[10px] font-black uppercase tracking-widest text-slate-500 mt-1">Android</div>
+              <div className="text-xs font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1.5">Android</div>
             </div>
             <div className="text-center group">
               <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform">15+</div>
-              <div className="text-[10px] font-black uppercase tracking-widest text-slate-500 mt-1">iOS</div>
+              <div className="text-xs font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1.5">iOS</div>
             </div>
             <div className="text-center group">
               <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform">10+</div>
-              <div className="text-[10px] font-black uppercase tracking-widest text-slate-500 mt-1">macOS</div>
+              <div className="text-xs font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1.5">macOS</div>
             </div>
             <div className="text-center group">
               <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform">5+</div>
-              <div className="text-[10px] font-black uppercase tracking-widest text-slate-500 mt-1">Backend</div>
+              <div className="text-xs font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1.5">Backend</div>
             </div>
           </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap justify-center gap-4 mb-12 animate-slide-up opacity-0 stagger-4">
-            <a 
-              href="#projects" 
-              className="px-10 py-4 bg-blue-600 text-white rounded-2xl font-black uppercase tracking-widest text-xs shadow-xl hover:-translate-y-1 transition-all"
+            <a
+              href="#projects"
+              className="px-10 py-4 bg-blue-600 text-white rounded-2xl font-bold uppercase tracking-wider text-sm shadow-xl shadow-blue-600/20 hover:bg-blue-700 hover:-translate-y-1 transition-all"
             >
               Portfolio
             </a>
-            <a 
-              href="#contact" 
-              className="px-10 py-4 glass text-slate-900 dark:text-white rounded-2xl font-black uppercase tracking-widest text-xs shadow-lg hover:-translate-y-1 transition-all"
+            <a
+              href="#contact"
+              className="px-10 py-4 glass text-slate-900 dark:text-white rounded-2xl font-bold uppercase tracking-wider text-sm shadow-lg hover:-translate-y-1 transition-all"
             >
               Contact Me
             </a>
@@ -275,37 +277,40 @@ const AboutSection = () => (
           {/* Section Header */}
           <div className="text-center mb-16">
             <span className="text-blue-600 font-mono text-sm tracking-wider uppercase">01. ABOUT ME</span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-4 text-slate-900 dark:text-white tracking-tight">
+            <h2 className="text-4xl md:text-5xl font-extrabold mt-3 text-slate-900 dark:text-white tracking-tight">
               Who I <span className="text-gradient">Am</span>
             </h2>
+            <p className="text-slate-600 dark:text-slate-300 mt-4 max-w-xl mx-auto leading-relaxed">
+              A Flutter developer and team lead focused on building fast, reliable products
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
+              <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
                 Experienced <span className="text-blue-600 font-bold">Senior Flutter developer</span> with 5+ years of professional mobile app development,
                 alongside 1+ year backend experience using <span className="text-cyan-500 font-bold">Node.js, Express.js, NestJS & MongoDB</span>.
               </p>
-              <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                Proven experience as a <span className="text-slate-900 dark:text-white font-bold uppercase tracking-tight">Team Lead</span>, handling project architecture, 
+              <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
+                Proven experience as a <span className="text-slate-900 dark:text-white font-semibold">Team Lead</span>, handling project architecture,
                 code reviews, API integration, backend development, and leading cross-functional teams.
               </p>
-              <p className="text-slate-600 dark:text-slate-400 leading-relaxed italic border-l-4 border-blue-600 pl-6">
-                Dedicated to building smooth, optimized, and user-friendly applications with minimal loading time, 
+              <p className="text-slate-600 dark:text-slate-300 leading-relaxed italic border-l-4 border-blue-600/60 pl-6">
+                Dedicated to building smooth, optimized, and user-friendly applications with minimal loading time,
                 stable performance, and clean, maintainable code.
               </p>
 
               <div className="pt-6 space-y-4">
-                <div className="flex items-center gap-3 text-slate-600 dark:text-slate-400 font-bold">
-                  <MapPin size={18} className="text-blue-600" />
+                <div className="flex items-center gap-3 text-slate-600 dark:text-slate-300 font-semibold">
+                  <MapPin size={18} className="text-blue-600 shrink-0" />
                   <span>Dhaka, Bangladesh</span>
                 </div>
-                <div className="flex items-center gap-3 text-slate-600 dark:text-slate-400 font-bold">
-                  <Briefcase size={18} className="text-blue-600" />
+                <div className="flex items-center gap-3 text-slate-600 dark:text-slate-300 font-semibold">
+                  <Briefcase size={18} className="text-blue-600 shrink-0" />
                   <span>Team Lead – Flutter & Backend</span>
                 </div>
-                <div className="flex items-center gap-3 text-slate-600 dark:text-slate-400 font-bold">
-                  <GraduationCap size={18} className="text-blue-600" />
+                <div className="flex items-center gap-3 text-slate-600 dark:text-slate-300 font-semibold">
+                  <GraduationCap size={18} className="text-blue-600 shrink-0" />
                   <span>B.Sc in CSE – MIST (2021)</span>
                 </div>
               </div>
@@ -317,21 +322,21 @@ const AboutSection = () => (
                 
                 <div className="relative z-10">
                   <div className="text-7xl font-black text-blue-600 dark:text-blue-500 mb-4">5+</div>
-                  <div className="text-xl font-black text-slate-900 dark:text-white mb-2 uppercase tracking-tighter">Years Experience</div>
-                  <div className="text-slate-500 font-medium mb-6">Building production-grade mobile applications</div>
+                  <div className="text-xl font-extrabold text-slate-900 dark:text-white mb-2 tracking-tight">Years Experience</div>
+                  <div className="text-slate-600 dark:text-slate-400 font-medium mb-6">Building production-grade mobile applications</div>
                   
                   <div className="grid grid-cols-3 gap-4 pt-6 border-t border-slate-200 dark:border-slate-800">
                     <div>
-                      <div className="text-3xl font-black text-blue-600">40+</div>
-                      <div className="text-[10px] font-black uppercase tracking-widest text-slate-400">Android Apps</div>
+                      <div className="text-3xl font-bold text-blue-600">40+</div>
+                      <div className="text-[11px] font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1">Android Apps</div>
                     </div>
                     <div>
-                      <div className="text-3xl font-black text-cyan-500">15+</div>
-                      <div className="text-[10px] font-black uppercase tracking-widest text-slate-400">iOS Apps</div>
+                      <div className="text-3xl font-bold text-cyan-500">15+</div>
+                      <div className="text-[11px] font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1">iOS Apps</div>
                     </div>
                     <div>
-                      <div className="text-3xl font-black text-slate-700 dark:text-slate-300">10+</div>
-                      <div className="text-[10px] font-black uppercase tracking-widest text-slate-400">macOS Apps</div>
+                      <div className="text-3xl font-bold text-slate-700 dark:text-slate-300">10+</div>
+                      <div className="text-[11px] font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1">macOS Apps</div>
                     </div>
                   </div>
                 </div>
@@ -400,10 +405,10 @@ const SkillsSection = () => {
         <RevealOnScroll>
           <div className="text-center mb-16">
             <span className="text-blue-600 font-mono text-sm tracking-wider uppercase">02. SKILLS</span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-4 text-slate-900 dark:text-white uppercase tracking-tighter">
+            <h2 className="text-4xl md:text-5xl font-extrabold mt-3 text-slate-900 dark:text-white tracking-tight">
               My <span className="text-gradient">Expertise</span>
             </h2>
-            <p className="text-slate-500 dark:text-slate-400 mt-4 max-w-2xl mx-auto font-medium">
+            <p className="text-slate-600 dark:text-slate-300 mt-4 max-w-xl mx-auto leading-relaxed">
               A comprehensive toolkit for building modern, scalable applications
             </p>
           </div>
@@ -418,13 +423,13 @@ const SkillsSection = () => {
                   <div className={`p-4 rounded-2xl ${category.color === 'blue' ? 'bg-blue-600/10 text-blue-600' : 'bg-cyan-600/10 text-cyan-600'}`}>
                     <category.icon size={28} />
                   </div>
-                  <h3 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tight">{category.title}</h3>
+                  <h3 className="text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight">{category.title}</h3>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   {category.skills.map((skill) => (
-                    <div key={skill} className="flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors group">
-                      <span className={`w-2 h-2 rounded-full ${category.color === 'blue' ? 'bg-blue-600' : 'bg-cyan-600'} group-hover:scale-125 transition-transform`} />
-                      <span className="text-sm font-bold uppercase tracking-tight">{skill}</span>
+                    <div key={skill} className="flex items-center gap-2.5 text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group">
+                      <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${category.color === 'blue' ? 'bg-blue-600' : 'bg-cyan-600'} group-hover:scale-150 transition-transform`} />
+                      <span className="text-sm font-medium leading-snug">{skill}</span>
                     </div>
                   ))}
                 </div>
@@ -440,8 +445,8 @@ const SkillsSection = () => {
             <div className="flex gap-10 animate-scroll">
               {[...techStack, ...techStack].map((tech, index) => (
                 <div key={`${tech.name}-${index}`} className="flex items-center gap-4 px-8 py-4 glass rounded-2xl whitespace-nowrap group hover:bg-blue-600 transition-all">
-                  <tech.icon size={22} className="text-blue-600 group-hover:text-white" />
-                  <span className="text-slate-900 dark:text-white font-black uppercase tracking-widest text-[10px] group-hover:text-white">{tech.name}</span>
+                  <tech.icon size={22} className="text-blue-600 group-hover:text-white shrink-0" />
+                  <span className="text-slate-900 dark:text-white font-bold tracking-wide text-sm group-hover:text-white">{tech.name}</span>
                 </div>
               ))}
             </div>
@@ -459,9 +464,12 @@ const ExperienceSection = () => (
       <RevealOnScroll>
         <div className="text-center mb-16">
           <span className="text-blue-600 font-mono text-sm tracking-wider uppercase">03. EXPERIENCE</span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-4 text-slate-900 dark:text-white uppercase tracking-tighter">
+          <h2 className="text-4xl md:text-5xl font-extrabold mt-3 text-slate-900 dark:text-white tracking-tight">
             Work <span className="text-gradient">History</span>
           </h2>
+          <p className="text-slate-600 dark:text-slate-300 mt-4 max-w-xl mx-auto leading-relaxed">
+            Seven years shipping production apps across Android, iOS and macOS
+          </p>
         </div>
 
         <div className="max-w-4xl mx-auto relative">
@@ -478,21 +486,21 @@ const ExperienceSection = () => (
                     <div className="glass rounded-[2rem] p-8 hover:border-blue-600/30 transition-all duration-300">
                       <div className="flex items-start justify-between mb-4">
                         <div>
-                          <h3 className="text-2xl font-black text-slate-900 dark:text-white tracking-tighter uppercase leading-none">{exp.role}</h3>
-                          <p className="text-blue-600 font-black uppercase text-xs tracking-widest mt-2">{exp.company}</p>
+                          <h3 className="text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-snug">{exp.role}</h3>
+                          <p className="text-blue-600 font-semibold text-xs tracking-wide mt-2">{exp.company}</p>
                         </div>
                         {isCurrent && <span className="px-3 py-1 text-[9px] font-black uppercase tracking-widest bg-blue-600/10 text-blue-600 rounded-full border border-blue-600/20">Current</span>}
                       </div>
-                      <div className="flex items-center gap-4 mb-6 text-xs text-slate-500 font-bold uppercase tracking-widest">
+                      <div className="flex items-center gap-4 mb-6 text-xs text-slate-500 dark:text-slate-400 font-medium tracking-wide">
                         <div className="flex items-center gap-2">
-                          <Calendar size={14} className="text-blue-600" />
+                          <Calendar size={14} className="text-blue-600 shrink-0" />
                           <span>{exp.period}</span>
                         </div>
                       </div>
                       <ul className="space-y-3">
                         {exp.bullets.slice(0, 4).map((resp, i) => (
-                          <li key={i} className="flex items-start gap-3 text-sm text-slate-500 dark:text-slate-400 font-medium leading-relaxed">
-                            <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-1.5 flex-shrink-0" />
+                          <li key={i} className="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-300 font-normal leading-relaxed">
+                            <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2 flex-shrink-0" />
                             <span>{resp}</span>
                           </li>
                         ))}
@@ -521,7 +529,7 @@ const ProjectsSection = () => {
     { title: 'Google Location App', description: 'Real-time location tracking with geofencing, route monitoring, push notifications and alerts.', tags: ['Flutter', 'Location', 'Geofencing'], featured: false },
   ];
 
-  const iosApps = ['Science Platform', 'Karigori Pathsala', 'Shikkha Squared', 'eTestPaper', 'MasterClass'];
+  const iosApps = resumeData.iosApps;
 
   return (
     <section id="projects" className="py-24 relative bg-slate-100/30 dark:bg-slate-900/10 scroll-mt-20">
@@ -529,10 +537,10 @@ const ProjectsSection = () => {
         <RevealOnScroll>
           <div className="text-center mb-16">
             <span className="text-blue-600 font-mono text-sm tracking-wider uppercase">04. PROJECTS</span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-4 text-slate-900 dark:text-white uppercase tracking-tighter">
+            <h2 className="text-4xl md:text-5xl font-extrabold mt-3 text-slate-900 dark:text-white tracking-tight">
               Featured <span className="text-gradient">Work</span>
             </h2>
-            <p className="text-slate-500 dark:text-slate-400 mt-4 max-w-2xl mx-auto font-medium">
+            <p className="text-slate-600 dark:text-slate-300 mt-4 max-w-xl mx-auto leading-relaxed">
               A selection of projects I've built and shipped to production
             </p>
           </div>
@@ -549,11 +557,11 @@ const ProjectsSection = () => {
                   </div>
                   {project.featured && <span className="px-3 py-1 text-[9px] font-black uppercase tracking-widest bg-cyan-600/10 text-cyan-500 rounded-full border border-cyan-500/20">Featured</span>}
                 </div>
-                <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-3 group-hover:text-blue-600 transition-colors tracking-tighter uppercase leading-none">{project.title}</h3>
-                <p className="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed font-medium">{project.description}</p>
+                <h3 className="text-2xl font-extrabold text-slate-900 dark:text-white mb-3 group-hover:text-blue-600 transition-colors tracking-tight leading-snug">{project.title}</h3>
+                <p className="text-slate-600 dark:text-slate-300 text-sm mb-6 leading-relaxed">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mt-auto">
                   {project.tags.map((tag) => (
-                    <span key={tag} className="px-3 py-1.5 text-[9px] font-black uppercase tracking-widest bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-lg">
+                    <span key={tag} className="px-3 py-1.5 text-[11px] font-semibold tracking-wide bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg">
                       {tag}
                     </span>
                   ))}
@@ -569,16 +577,52 @@ const ProjectsSection = () => {
                 <Apple size={32} />
               </div>
               <div>
-                <h3 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tighter leading-none">Published iOS Apps</h3>
-                <p className="text-slate-500 dark:text-slate-400 text-sm font-bold mt-2 uppercase tracking-widest">Available on the App Store</p>
+                <h3 className="text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-snug">
+                  Published iOS Apps
+                </h3>
+                <p className="text-slate-500 dark:text-slate-400 text-sm font-semibold mt-2 tracking-wide">
+                  {iosApps.length} apps live on the App Store — several also on the Mac App Store
+                </p>
               </div>
             </div>
-            <div className="flex flex-wrap gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
               {iosApps.map((app) => (
-                <div key={app} className="flex items-center gap-3 px-6 py-3 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-blue-600 hover:shadow-xl transition-all duration-300 group">
-                  <span className="w-2.5 h-2.5 bg-cyan-500 rounded-full group-hover:scale-125 transition-transform" />
-                  <span className="font-black text-xs uppercase tracking-tight text-slate-700 dark:text-slate-300 group-hover:text-blue-600">{app}</span>
-                </div>
+                <a
+                  key={app.name}
+                  href={app.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-3.5 p-3.5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-blue-600/60 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                >
+                  <div className="relative w-14 h-14 shrink-0">
+                    {app.icon ? (
+                      <img
+                        src={app.icon}
+                        alt={`${app.name} icon`}
+                        loading="lazy"
+                        className="w-full h-full rounded-xl object-cover shadow-md group-hover:scale-105 transition-transform duration-300"
+                      />
+                    ) : (
+                      <div className="w-full h-full rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center shadow-md">
+                        <Apple size={22} className="text-white" />
+                      </div>
+                    )}
+                    {app.note && (
+                      <span className="absolute -bottom-1 -right-1 px-1.5 py-0.5 rounded-full bg-amber-500 text-white text-[8px] font-bold uppercase tracking-wide border-2 border-white dark:border-slate-900">
+                        {app.note}
+                      </span>
+                    )}
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="font-bold text-sm leading-tight text-slate-800 dark:text-slate-100 group-hover:text-blue-600 transition-colors truncate">
+                      {app.name}
+                    </p>
+                    <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-1 flex items-center gap-1">
+                      {app.store}
+                      <ExternalLink size={10} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </p>
+                  </div>
+                </a>
               ))}
             </div>
           </div>
@@ -592,8 +636,8 @@ const ProjectsSection = () => {
               { value: '5+', label: 'Backend Projects' },
             ].map((stat, index) => (
               <div key={stat.label} className={`text-center p-8 glass rounded-[2rem] border border-blue-600/5 hover:border-blue-600/20 transition-all animate-scale-in opacity-0 stagger-${index + 1}`}>
-                <div className="text-4xl font-black text-blue-600 dark:text-blue-500 leading-none">{stat.value}</div>
-                <div className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 mt-3">{stat.label}</div>
+                <div className="text-4xl font-bold text-blue-600 dark:text-blue-500 leading-none">{stat.value}</div>
+                <div className="text-xs font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-2.5">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -610,8 +654,8 @@ const ContactSection = () => (
       <RevealOnScroll>
         <div className="text-center mb-16">
           <span className="text-blue-600 font-mono text-sm tracking-wider uppercase">05. CONTACT</span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-4 text-slate-900 dark:text-white uppercase tracking-tighter">Let's <span className="text-gradient">Connect</span></h2>
-          <p className="text-slate-500 dark:text-slate-400 mt-4 max-w-2xl mx-auto font-medium">
+          <h2 className="text-4xl md:text-5xl font-extrabold mt-3 text-slate-900 dark:text-white tracking-tight">Let's <span className="text-gradient">Connect</span></h2>
+          <p className="text-slate-600 dark:text-slate-300 mt-4 max-w-xl mx-auto leading-relaxed">
             I'm currently open to new opportunities and high-impact projects. Let's build the future together.
           </p>
         </div>
@@ -628,11 +672,11 @@ const ContactSection = () => (
                     {item.icon}
                   </div>
                   <div>
-                    <h3 className="font-black text-slate-900 dark:text-white uppercase tracking-widest text-[10px] mb-1">{item.label}</h3>
+                    <h3 className="font-bold text-slate-900 dark:text-white uppercase tracking-widest text-[11px] mb-1.5">{item.label}</h3>
                     {item.href !== '#' ? (
-                      <a href={item.href} className="text-xl text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors font-black tracking-tight">{item.value}</a>
+                      <a href={item.href} className="text-xl text-slate-700 dark:text-slate-200 hover:text-blue-600 transition-colors font-bold tracking-tight">{item.value}</a>
                     ) : (
-                      <p className="text-xl text-slate-500 dark:text-slate-400 font-black tracking-tight">{item.value}</p>
+                      <p className="text-xl text-slate-700 dark:text-slate-200 font-bold tracking-tight">{item.value}</p>
                     )}
                   </div>
                 </div>
@@ -656,14 +700,14 @@ const ContactSection = () => (
                 <Send size={32} className="text-white" />
               </div>
               <div className="space-y-4">
-                <h3 className="text-3xl font-black text-slate-900 dark:text-white tracking-tighter uppercase leading-none">Ready to start <br />a project?</h3>
-                <p className="text-slate-500 dark:text-slate-400 text-lg font-medium leading-relaxed">I'm always excited to work on new challenges. Let's discuss your vision.</p>
+                <h3 className="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">Ready to start <br />a project?</h3>
+                <p className="text-slate-600 dark:text-slate-300 text-lg leading-relaxed">I'm always excited to work on new challenges. Let's discuss your vision.</p>
               </div>
               <div className="space-y-4 pt-4">
-                <a href={`mailto:${resumeData.email}`} className="flex items-center justify-center gap-3 w-full py-5 bg-blue-600 text-white rounded-2xl font-black uppercase tracking-widest text-xs shadow-xl hover:bg-blue-700 hover:-translate-y-1 transition-all">
+                <a href={`mailto:${resumeData.email}`} className="flex items-center justify-center gap-3 w-full py-5 bg-blue-600 text-white rounded-2xl font-bold uppercase tracking-wider text-sm shadow-xl shadow-blue-600/20 hover:bg-blue-700 hover:-translate-y-1 transition-all">
                   <Mail size={20} /> Send Email
                 </a>
-                <a href={`https://wa.me/8801718663032`} target="_blank" className="flex items-center justify-center gap-3 w-full py-5 glass text-slate-900 dark:text-white border border-blue-600/20 rounded-2xl font-black uppercase tracking-widest text-xs shadow-lg hover:-translate-y-1 transition-all">
+                <a href={`https://wa.me/8801718663032`} target="_blank" className="flex items-center justify-center gap-3 w-full py-5 glass text-slate-900 dark:text-white border border-blue-600/20 rounded-2xl font-bold uppercase tracking-wider text-sm shadow-lg hover:-translate-y-1 transition-all">
                   <Phone size={20} /> WhatsApp Me
                 </a>
               </div>
