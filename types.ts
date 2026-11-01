@@ -29,11 +29,26 @@ export interface StoreApp {
   website?: string;
 }
 
-export interface WebProject {
+/**
+ * A single shipped product. Most products ship on Android AND iOS,
+ * and many also have a companion web platform.
+ */
+export interface Product {
   name: string;
-  url: string;
   description: string;
   tags: string[];
+  /** Google Play listing */
+  play?: string;
+  /** Optional label override for the `play` button (e.g. "Softonic") */
+  playLabel?: string;
+  /** Apple App Store listing */
+  appStore?: string;
+  /** Companion web platform */
+  web?: string;
+  /** Icon for the product (Play or App Store artwork) */
+  icon: string;
+  /** iOS App Store id, used for the App Store link */
+  appStoreId?: number;
 }
 
 export interface SkillCategory {
@@ -61,6 +76,5 @@ export interface ResumeData {
   majorProjects: Project[];
   appLinks: AppLink[];
   strengths: string[];
-  iosApps: StoreApp[];
-  webProjects: WebProject[];
+  products: Product[];
 }

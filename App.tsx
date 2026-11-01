@@ -10,6 +10,14 @@ import {
   Cloud, GitBranch, Palette, CreditCard, Bell, Shield, Settings
 } from 'lucide-react';
 
+// --- Derived product counts (single source of truth for every stat on the page) ---
+const productStats = {
+  total: resumeData.products.length,
+  android: resumeData.products.filter((p) => p.play).length,
+  ios: resumeData.products.filter((p) => p.appStore).length,
+  web: resumeData.products.filter((p) => p.web).length,
+};
+
 // --- Animated Reveal Wrapper ---
 const RevealOnScroll = ({ children }: { children: React.ReactNode }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -154,10 +162,12 @@ const HeroSection = () => {
               <div className="absolute inset-0 bg-blue-600/20 rounded-full blur-2xl animate-pulse" />
               
               <div className="relative w-36 h-36 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-[0_20px_50px_rgba(37,99,235,0.3)] mx-auto z-10">
-                <img 
-                  src="https://api.dicebear.com/7.x/avataaars/svg?seed=AbdulRahim&backgroundColor=2563eb" 
-                  alt="Abdul Rahim" 
-                  className="w-full h-full object-cover object-top"
+                <img
+                  src="/images/profile.jpg"
+                  alt="Abdul Rahim"
+                  width={1040}
+                  height={1560}
+                  className="w-full h-full object-cover object-[50%_26%] scale-[1.45]"
                 />
               </div>
               
@@ -170,7 +180,7 @@ const HeroSection = () => {
 
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 animate-fade-in opacity-0 stagger-1">
-            <span className="w-2 h-2 bg-blue-600 rounded-full animate-glow" />
+            <span className="w-2 h-2 bg-emerald-500 rounded-full animate-glow shadow-[0_0_10px_2px_rgba(16,185,129,0.6)]" />
             <span className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-widest text-[10px]">Active & Available</span>
           </div>
 
@@ -190,42 +200,30 @@ const HeroSection = () => {
           </p>
 
           {/* Description */}
-          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-8 animate-slide-up opacity-0 stagger-2 leading-relaxed">
-            5+ years building high-performance products with Flutter and modern web tech.
-            Delivered <span className="text-slate-900 dark:text-white font-bold">40+ Android</span>,
-            <span className="text-slate-900 dark:text-white font-bold">15+ iOS</span>
-            <span className="mx-1.5 font-light">&amp;</span>
-            <span className="text-slate-900 dark:text-white font-bold">10+ macOS apps</span>
-            <span className="mx-1.5 font-light">&amp;</span>
-            <span className="text-slate-900 dark:text-white font-bold">6+ web platforms</span> to production.
+          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-10 animate-slide-up opacity-0 stagger-2 leading-relaxed">
+            5+ years building high-performance products with Flutter and modern web tech —
+            shipped to production across mobile and the browser.
           </p>
 
           {/* Stats */}
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-6 mb-10 animate-slide-up opacity-0 stagger-3">
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform">5+</div>
-              <div className="text-xs font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1.5">Experience</div>
-            </div>
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform">40+</div>
-              <div className="text-xs font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1.5">Android</div>
-            </div>
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform">15+</div>
-              <div className="text-xs font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1.5">iOS</div>
-            </div>
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform">10+</div>
-              <div className="text-xs font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1.5">macOS</div>
-            </div>
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform">6+</div>
-              <div className="text-xs font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1.5">Web</div>
-            </div>
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform">5+</div>
-              <div className="text-xs font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1.5">Backend</div>
-            </div>
+          <div className="grid grid-cols-3 gap-x-4 gap-y-8 max-w-2xl mx-auto mb-12 animate-slide-up opacity-0 stagger-3">
+            {[
+              { value: '5+', label: 'Years Experience' },
+              { value: productStats.android, label: 'Android Apps' },
+              { value: productStats.ios, label: 'iOS Apps' },
+              { value: productStats.web, label: 'Web Platforms' },
+              { value: productStats.total, label: 'Products Shipped' },
+              { value: '5+', label: 'Backend' },
+            ].map((stat) => (
+              <div key={stat.label} className="text-center group">
+                <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform">
+                  {stat.value}
+                </div>
+                <div className="text-[11px] md:text-xs font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-2">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
           </div>
 
           {/* CTA Buttons */}
@@ -336,20 +334,20 @@ const AboutSection = () => (
 
                   <div className="grid grid-cols-4 gap-3 pt-6 border-t border-slate-200 dark:border-slate-800">
                     <div>
-                      <div className="text-2xl lg:text-3xl font-bold text-blue-600">40+</div>
+                      <div className="text-2xl lg:text-3xl font-bold text-blue-600">{productStats.android}</div>
                       <div className="text-[10px] lg:text-[11px] font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1">Android</div>
                     </div>
                     <div>
-                      <div className="text-2xl lg:text-3xl font-bold text-cyan-500">15+</div>
+                      <div className="text-2xl lg:text-3xl font-bold text-cyan-500">{productStats.ios}</div>
                       <div className="text-[10px] lg:text-[11px] font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1">iOS</div>
                     </div>
                     <div>
-                      <div className="text-2xl lg:text-3xl font-bold text-slate-700 dark:text-slate-300">10+</div>
-                      <div className="text-[10px] lg:text-[11px] font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1">macOS</div>
+                      <div className="text-2xl lg:text-3xl font-bold text-slate-700 dark:text-slate-300">{productStats.web}</div>
+                      <div className="text-[10px] lg:text-[11px] font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1">Web</div>
                     </div>
                     <div>
-                      <div className="text-2xl lg:text-3xl font-bold text-blue-600">6+</div>
-                      <div className="text-[10px] lg:text-[11px] font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1">Web</div>
+                      <div className="text-2xl lg:text-3xl font-bold text-blue-600">{productStats.total}</div>
+                      <div className="text-[10px] lg:text-[11px] font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1">Products</div>
                     </div>
                   </div>
                 </div>
@@ -357,7 +355,7 @@ const AboutSection = () => (
 
               <div className="absolute -bottom-4 -right-4 glass rounded-xl p-4 shadow-xl animate-float">
                 <div className="flex items-center gap-2">
-                  <span className="w-3 h-3 bg-blue-600 rounded-full animate-glow" />
+                  <span className="w-3 h-3 bg-emerald-500 rounded-full animate-glow shadow-[0_0_10px_2px_rgba(16,185,129,0.6)]" />
                   <span className="text-xs font-black uppercase text-slate-900 dark:text-white">Open to Work</span>
                 </div>
               </div>
@@ -542,16 +540,35 @@ const ExperienceSection = () => (
 
 // --- Projects Section ---
 const ProjectsSection = () => {
+  // Featured projects. `productKey` links to a published product in
+  // resumeData.products so the card renders the real store artwork.
+  // Projects without a published listing fall back to a gradient monogram.
   const projects = [
-    { title: 'BCS Doctor', description: 'Full caching-based architecture with first-time login management system and offline-mode with automatic sync.', tags: ['Flutter', 'Caching', 'Offline-First'], featured: true },
-    { title: 'Physics Study BD', description: 'Premium design with UI animations, optimized for students and exam preparation.', tags: ['Flutter', 'Animations', 'Education'], featured: true },
-    { title: 'Bongo Baba (E-commerce)', description: 'Complete e-commerce solution with product catalog, cart, checkout flow, payment gateway integration, and order tracking.', tags: ['Flutter', 'E-commerce', 'Payments'], featured: true },
-    { title: 'Chat App', description: 'Real-time messaging with WebSocket, offline chat, local storage, message caching, and push notifications.', tags: ['Flutter', 'WebSocket', 'Real-time'], featured: false },
-    { title: 'SMS to Mail', description: 'Collects device SMS in background and sends messages to email via SMTP. Background service optimized for battery usage.', tags: ['Flutter', 'Background Services', 'SMTP'], featured: false },
-    { title: 'Google Location App', description: 'Real-time location tracking with geofencing, route monitoring, push notifications and alerts.', tags: ['Flutter', 'Location', 'Geofencing'], featured: false },
+    { title: 'BCS Doctor', productKey: 'BCS Doctor', description: 'Full caching-based architecture with first-time login management system and offline-mode with automatic sync.', tags: ['Flutter', 'Caching', 'Offline-First'], featured: true },
+    { title: 'Physics Study BD', productKey: 'Physics Study BD', description: 'Premium design with UI animations, optimized for students and exam preparation.', tags: ['Flutter', 'Animations', 'Education'], featured: true },
+    { title: 'Bongo Baba (E-commerce)', productKey: 'Bongo Baba', description: 'Complete e-commerce solution with product catalog, cart, checkout flow, payment gateway integration, and order tracking.', tags: ['Flutter', 'E-commerce', 'Payments'], featured: true },
+    { title: 'Chat App', productKey: null, description: 'Real-time messaging with WebSocket, offline chat, local storage, message caching, and push notifications.', tags: ['Flutter', 'WebSocket', 'Real-time'], featured: false },
+    { title: 'SMS to Mail', productKey: null, description: 'Collects device SMS in background and sends messages to email via SMTP. Background service optimized for battery usage.', tags: ['Flutter', 'Background Services', 'SMTP'], featured: false },
+    { title: 'Google Location App', productKey: null, description: 'Real-time location tracking with geofencing, route monitoring, push notifications and alerts.', tags: ['Flutter', 'Location', 'Geofencing'], featured: false },
   ];
 
-  const iosApps = resumeData.iosApps;
+  const productIcons = new Map(
+    resumeData.products.map((p) => [p.name, p.icon] as const)
+  );
+
+  const getIcon = (key: string | null) => (key ? productIcons.get(key) : undefined);
+
+  const products = resumeData.products;
+  const [productFilter, setProductFilter] = useState<'All' | 'Android' | 'iOS' | 'Web'>('All');
+
+  const productFilters = ['All', 'Android', 'iOS', 'Web'] as const;
+
+  const filteredProducts = products.filter((product) => {
+    if (productFilter === 'All') return true;
+    if (productFilter === 'Android') return Boolean(product.play);
+    if (productFilter === 'iOS') return Boolean(product.appStore);
+    return Boolean(product.web);
+  });
 
   return (
     <section id="projects" className="py-24 relative bg-slate-100/30 dark:bg-slate-900/10 scroll-mt-20">
@@ -574,9 +591,31 @@ const ProjectsSection = () => {
                 className={`glass rounded-[2rem] p-8 group hover:border-blue-600/30 transition-all duration-500 animate-slide-up opacity-0 stagger-${Math.min(index + 1, 6)}`}
               >
                 <div className="flex items-start justify-between mb-6">
-                  <div className="p-4 rounded-2xl bg-blue-600/10 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
-                    <Smartphone size={28} />
-                  </div>
+                  {getIcon(project.productKey) ? (
+                    <div className="w-[60px] h-[60px] shrink-0 rounded-2xl overflow-hidden shadow-lg group-hover:scale-105 transition-transform duration-300">
+                      <img
+                        src={getIcon(project.productKey)}
+                        alt={`${project.title} icon`}
+                        loading="lazy"
+                        onError={(e) => {
+                          const img = e.currentTarget;
+                          img.style.display = 'none';
+                          img.parentElement?.querySelector('[data-fallback]')?.classList.remove('hidden');
+                        }}
+                        className="w-full h-full object-cover"
+                      />
+                      <div
+                        data-fallback
+                        className="hidden w-full h-full items-center justify-center bg-gradient-to-br from-blue-600 to-cyan-500 text-white font-black text-lg"
+                      >
+                        {project.title.replace(/[^A-Za-z ]/g, '').trim().split(/\s+/).map(w => w[0]).slice(0, 2).join('')}
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="w-[60px] h-[60px] shrink-0 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center text-white font-black text-lg shadow-lg group-hover:scale-105 transition-transform duration-300">
+                      {project.title.replace(/[^A-Za-z ]/g, '').trim().split(/\s+/).map(w => w[0]).slice(0, 2).join('')}
+                    </div>
+                  )}
                   {project.featured && <span className="px-3 py-1 text-[9px] font-black uppercase tracking-widest bg-cyan-600/10 text-cyan-500 rounded-full border border-cyan-500/20">Featured</span>}
                 </div>
                 <h3 className="text-2xl font-extrabold text-slate-900 dark:text-white mb-3 group-hover:text-blue-600 transition-colors tracking-tight leading-snug">{project.title}</h3>
@@ -592,131 +631,114 @@ const ProjectsSection = () => {
             ))}
           </div>
 
-          {/* iOS Apps Section */}
+          {/* Products Section */}
           <div className="glass rounded-[3rem] p-10 mb-16 border border-blue-600/10">
             <div className="flex items-center gap-6 mb-10">
               <div className="p-4 rounded-2xl bg-cyan-600/10 text-cyan-600">
-                <Apple size={32} />
+                <Rocket size={32} />
               </div>
               <div>
                 <h3 className="text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-snug">
-                  Published iOS Apps
+                  Products I Shipped
                 </h3>
                 <p className="text-slate-500 dark:text-slate-400 text-sm font-semibold mt-2 tracking-wide">
-                  {iosApps.length} apps live on the App Store — several also on the Mac App Store
+                  {products.length} live products across Google Play, the App Store and the web
                 </p>
               </div>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-              {iosApps.map((app) => (
-                <div
-                  key={app.name}
-                  className="group relative flex items-center gap-3.5 p-3.5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-blue-600/60 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+
+            <div className="flex flex-wrap gap-2 mb-8">
+              {productFilters.map((filter) => (
+                <button
+                  key={filter}
+                  type="button"
+                  onClick={() => setProductFilter(filter)}
+                  className={`px-4 py-2 rounded-xl text-xs font-bold tracking-wide transition-all duration-300 border ${
+                    productFilter === filter
+                      ? 'bg-blue-600 text-white border-blue-600 shadow-lg shadow-blue-600/20'
+                      : 'bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-800 hover:border-blue-600/50 hover:text-blue-600'
+                  }`}
                 >
-                  <a
-                    href={app.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="relative w-14 h-14 shrink-0"
-                    aria-label={`${app.name} on the ${app.store}`}
-                  >
-                    {app.icon ? (
+                  {filter}
+                </button>
+              ))}
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {filteredProducts.map((product) => (
+                <div
+                  key={product.name}
+                  className="group relative flex flex-col p-5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-blue-600/60 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                >
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="relative w-14 h-14 shrink-0">
                       <img
-                        src={app.icon}
-                        alt={`${app.name} icon`}
+                        src={product.icon}
+                        alt={`${product.name} icon`}
                         loading="lazy"
                         className="w-full h-full rounded-xl object-cover shadow-md group-hover:scale-105 transition-transform duration-300"
                       />
-                    ) : (
-                      <div className="w-full h-full rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center shadow-md">
-                        <Apple size={22} className="text-white" />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <h4 className="font-extrabold text-base text-slate-800 dark:text-slate-100 group-hover:text-blue-600 transition-colors leading-tight mb-2">
+                        {product.name}
+                      </h4>
+                      <div className="flex flex-wrap gap-1.5">
+                        {product.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="px-2 py-0.5 text-[10px] font-semibold tracking-wide bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-md"
+                          >
+                            {tag}
+                          </span>
+                        ))}
                       </div>
-                    )}
-                    {app.note && (
-                      <span className="absolute -bottom-1 -right-1 px-1.5 py-0.5 rounded-full bg-amber-500 text-white text-[8px] font-bold uppercase tracking-wide border-2 border-white dark:border-slate-900">
-                        {app.note}
-                      </span>
-                    )}
-                  </a>
-                  <div className="min-w-0 flex-1">
-                    <p className="font-bold text-sm leading-tight text-slate-800 dark:text-slate-100 truncate">
-                      {app.name}
-                    </p>
-                    <div className="flex items-center gap-2 mt-1.5">
-                      <a
-                        href={app.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors"
-                      >
-                        {app.store}
-                        <ExternalLink size={10} />
-                      </a>
-                      {app.website && (
-                        <a
-                          href={app.website}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-md bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500 hover:text-white transition-colors text-[10px] font-bold"
-                          title="Visit website"
-                        >
-                          <Globe size={10} />
-                          Web
-                        </a>
-                      )}
                     </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
 
-          {/* Web Projects Section */}
-          <div className="glass rounded-[3rem] p-10 mb-16 border border-blue-600/10">
-            <div className="flex items-center gap-6 mb-10">
-              <div className="p-4 rounded-2xl bg-blue-600/10 text-blue-600">
-                <Globe size={32} />
-              </div>
-              <div>
-                <h3 className="text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-snug">
-                  Web Platforms I Built
-                </h3>
-                <p className="text-slate-500 dark:text-slate-400 text-sm font-semibold mt-2 tracking-wide">
-                  Live web applications running alongside the mobile apps
-                </p>
-              </div>
-            </div>
-            <div className="grid md:grid-cols-2 gap-4">
-              {resumeData.webProjects.map((project) => (
-                <a
-                  key={project.name}
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex flex-col p-5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-blue-600/60 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-                >
-                  <div className="flex items-start justify-between gap-3 mb-3">
-                    <h4 className="font-extrabold text-base text-slate-800 dark:text-slate-100 group-hover:text-blue-600 transition-colors leading-tight">
-                      {project.name}
-                    </h4>
-                    <span className="shrink-0 p-1.5 rounded-lg bg-blue-600/10 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                      <ExternalLink size={14} />
-                    </span>
-                  </div>
-                  <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4 flex-1">
-                    {project.description}
+                  <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-5 flex-1">
+                    {product.description}
                   </p>
+
                   <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2.5 py-1 text-[11px] font-semibold tracking-wide bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg"
+                    {product.play && (
+                      <a
+                        href={product.play}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-green-500/10 text-green-600 dark:text-green-400 hover:bg-green-500 hover:text-white transition-colors text-[11px] font-bold"
+                        title={product.playLabel ? `Open on ${product.playLabel}` : 'Open on Google Play'}
                       >
-                        {tag}
-                      </span>
-                    ))}
+                        <Play size={11} />
+                        {product.playLabel || 'Android'}
+                      </a>
+                    )}
+                    {product.appStore && (
+                      <a
+                        href={product.appStore}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-500/10 text-slate-600 dark:text-slate-300 hover:bg-slate-700 hover:text-white transition-colors text-[11px] font-bold"
+                        title="Open on the App Store"
+                      >
+                        <Apple size={11} />
+                        iOS
+                      </a>
+                    )}
+                    {product.web && (
+                      <a
+                        href={product.web}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500 hover:text-white transition-colors text-[11px] font-bold"
+                        title="Visit website"
+                      >
+                        <Globe size={11} />
+                        Web
+                      </a>
+                    )}
                   </div>
-                </a>
+                </div>
               ))}
             </div>
           </div>
@@ -724,10 +746,10 @@ const ProjectsSection = () => {
           {/* Stats Banner */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { value: '40+', label: 'Android Apps' },
-              { value: '15+', label: 'iOS Apps' },
-              { value: '10+', label: 'macOS Apps' },
-              { value: '6+', label: 'Web Platforms' },
+              { value: String(products.filter((p) => p.play).length), label: 'Android Apps' },
+              { value: String(products.filter((p) => p.appStore).length), label: 'iOS Apps' },
+              { value: String(products.filter((p) => p.web).length), label: 'Web Platforms' },
+              { value: String(products.length), label: 'Products Shipped' },
             ].map((stat, index) => (
               <div key={stat.label} className={`text-center p-8 glass rounded-[2rem] border border-blue-600/5 hover:border-blue-600/20 transition-all animate-scale-in opacity-0 stagger-${index + 1}`}>
                 <div className="text-4xl font-bold text-blue-600 dark:text-blue-500 leading-none">{stat.value}</div>
