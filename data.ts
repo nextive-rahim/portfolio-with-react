@@ -9,7 +9,7 @@ export const resumeData: ResumeData = {
   phone: "01718663032",
   linkedin: "linkedin.com/in/abdul-rahim-6b09292a0",
   github: "github.com/developer-rahim",
-  summary: "Experienced Senior Flutter developer with 4+ years of mobile expertise and 1+ year backend experience in Node.js/NestJS. Proven leader of cross-functional teams at Nextive Solution, delivering 40+ production apps across Android and iOS. Expert in offline-first systems, custom UI/UX, and high-performance architectures.",
+  summary: "Experienced Senior Flutter developer with 5+ years of mobile expertise and 1+ year backend experience in Node.js/NestJS. Proven leader of cross-functional teams at Nextive Solution, delivering 40+ Android, 15+ iOS and 10+ macOS production apps published on the Play Store, App Store and Mac App Store. Expert in offline-first systems, custom UI/UX, and high-performance architectures.",
   coreSkills: [
     {
       title: "Mobile (Flutter/Dart)",

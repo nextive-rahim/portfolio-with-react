@@ -188,23 +188,32 @@ const HeroSection = () => {
 
           {/* Description */}
           <p className="text-lg text-slate-500 dark:text-slate-400 max-w-2xl mx-auto mb-8 animate-slide-up opacity-0 stagger-2 leading-relaxed">
-            4+ years building high-performance mobile apps with Flutter. 
-            Delivered <span className="text-slate-900 dark:text-white font-black">30+ Android</span> & 
-            <span className="text-slate-900 dark:text-white font-black"> 8+ iOS apps</span> to production.
+            5+ years building high-performance mobile apps with Flutter.
+            Delivered <span className="text-slate-900 dark:text-white font-black">40+ Android</span>,
+            <span className="text-slate-900 dark:text-white font-black">15+ iOS</span> &
+            <span className="text-slate-900 dark:text-white font-black">10+ macOS apps</span> to production.
           </p>
 
           {/* Stats */}
           <div className="flex flex-wrap justify-center gap-8 mb-10 animate-slide-up opacity-0 stagger-3">
             <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold text-gradient group-hover:scale-110 transition-transform">4+</div>
+              <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform">5+</div>
               <div className="text-[10px] font-black uppercase tracking-widest text-slate-500 mt-1">Experience</div>
             </div>
             <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold text-gradient group-hover:scale-110 transition-transform">38+</div>
-              <div className="text-[10px] font-black uppercase tracking-widest text-slate-500 mt-1">Apps</div>
+              <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform">40+</div>
+              <div className="text-[10px] font-black uppercase tracking-widest text-slate-500 mt-1">Android</div>
             </div>
             <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold text-gradient group-hover:scale-110 transition-transform">5+</div>
+              <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform">15+</div>
+              <div className="text-[10px] font-black uppercase tracking-widest text-slate-500 mt-1">iOS</div>
+            </div>
+            <div className="text-center group">
+              <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform">10+</div>
+              <div className="text-[10px] font-black uppercase tracking-widest text-slate-500 mt-1">macOS</div>
+            </div>
+            <div className="text-center group">
+              <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform">5+</div>
               <div className="text-[10px] font-black uppercase tracking-widest text-slate-500 mt-1">Backend</div>
             </div>
           </div>
@@ -274,7 +283,7 @@ const AboutSection = () => (
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
-                Experienced <span className="text-blue-600 font-bold">Senior Flutter developer</span> with 4+ years of professional mobile app development, 
+                Experienced <span className="text-blue-600 font-bold">Senior Flutter developer</span> with 5+ years of professional mobile app development,
                 alongside 1+ year backend experience using <span className="text-cyan-500 font-bold">Node.js, Express.js, NestJS & MongoDB</span>.
               </p>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -307,18 +316,22 @@ const AboutSection = () => (
                 <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/10 rounded-full blur-2xl" />
                 
                 <div className="relative z-10">
-                  <div className="text-7xl font-black text-gradient mb-4">4+</div>
+                  <div className="text-7xl font-black text-blue-600 dark:text-blue-500 mb-4">5+</div>
                   <div className="text-xl font-black text-slate-900 dark:text-white mb-2 uppercase tracking-tighter">Years Experience</div>
                   <div className="text-slate-500 font-medium mb-6">Building production-grade mobile applications</div>
                   
-                  <div className="grid grid-cols-2 gap-4 pt-6 border-t border-slate-200 dark:border-slate-800">
+                  <div className="grid grid-cols-3 gap-4 pt-6 border-t border-slate-200 dark:border-slate-800">
                     <div>
-                      <div className="text-3xl font-black text-blue-600">30+</div>
+                      <div className="text-3xl font-black text-blue-600">40+</div>
                       <div className="text-[10px] font-black uppercase tracking-widest text-slate-400">Android Apps</div>
                     </div>
                     <div>
-                      <div className="text-3xl font-black text-cyan-500">8+</div>
+                      <div className="text-3xl font-black text-cyan-500">15+</div>
                       <div className="text-[10px] font-black uppercase tracking-widest text-slate-400">iOS Apps</div>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-black text-slate-700 dark:text-slate-300">10+</div>
+                      <div className="text-[10px] font-black uppercase tracking-widest text-slate-400">macOS Apps</div>
                     </div>
                   </div>
                 </div>
@@ -573,13 +586,13 @@ const ProjectsSection = () => {
           {/* Stats Banner */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { value: '30+', label: 'Android Apps' },
-              { value: '8+', label: 'iOS Apps' },
+              { value: '40+', label: 'Android Apps' },
+              { value: '15+', label: 'iOS Apps' },
+              { value: '10+', label: 'macOS Apps' },
               { value: '5+', label: 'Backend Projects' },
-              { value: '40-60%', label: 'Performance Boost' },
             ].map((stat, index) => (
               <div key={stat.label} className={`text-center p-8 glass rounded-[2rem] border border-blue-600/5 hover:border-blue-600/20 transition-all animate-scale-in opacity-0 stagger-${index + 1}`}>
-                <div className="text-4xl font-black text-gradient leading-none">{stat.value}</div>
+                <div className="text-4xl font-black text-blue-600 dark:text-blue-500 leading-none">{stat.value}</div>
                 <div className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 mt-3">{stat.label}</div>
               </div>
             ))}
