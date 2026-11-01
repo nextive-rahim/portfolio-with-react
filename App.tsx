@@ -185,19 +185,23 @@ const HeroSection = () => {
             <span className="text-blue-600 font-black tracking-tight">Flutter Developer</span>
             <span className="mx-2.5 text-slate-400/70 font-light">&amp;</span>
             <span className="text-cyan-500 font-black tracking-tight">Backend Engineer</span>
+            <span className="mx-2.5 text-slate-400/70 font-light">&amp;</span>
+            <span className="text-blue-600 font-black tracking-tight">Web Developer</span>
           </p>
 
           {/* Description */}
           <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-8 animate-slide-up opacity-0 stagger-2 leading-relaxed">
-            5+ years building high-performance mobile apps with Flutter.
+            5+ years building high-performance products with Flutter and modern web tech.
             Delivered <span className="text-slate-900 dark:text-white font-bold">40+ Android</span>,
             <span className="text-slate-900 dark:text-white font-bold">15+ iOS</span>
             <span className="mx-1.5 font-light">&amp;</span>
-            <span className="text-slate-900 dark:text-white font-bold">10+ macOS apps</span> to production.
+            <span className="text-slate-900 dark:text-white font-bold">10+ macOS apps</span>
+            <span className="mx-1.5 font-light">&amp;</span>
+            <span className="text-slate-900 dark:text-white font-bold">6+ web platforms</span> to production.
           </p>
 
           {/* Stats */}
-          <div className="flex flex-wrap justify-center gap-x-10 gap-y-6 mb-10 animate-slide-up opacity-0 stagger-3">
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-6 mb-10 animate-slide-up opacity-0 stagger-3">
             <div className="text-center group">
               <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform">5+</div>
               <div className="text-xs font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1.5">Experience</div>
@@ -213,6 +217,10 @@ const HeroSection = () => {
             <div className="text-center group">
               <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform">10+</div>
               <div className="text-xs font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1.5">macOS</div>
+            </div>
+            <div className="text-center group">
+              <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform">6+</div>
+              <div className="text-xs font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1.5">Web</div>
             </div>
             <div className="text-center group">
               <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform">5+</div>
@@ -289,7 +297,8 @@ const AboutSection = () => (
             <div className="space-y-6">
               <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
                 Experienced <span className="text-blue-600 font-bold">Senior Flutter developer</span> with 5+ years of professional mobile app development,
-                alongside 1+ year backend experience using <span className="text-cyan-500 font-bold">Node.js, Express.js, NestJS & MongoDB</span>.
+                alongside backend experience using <span className="text-cyan-500 font-bold">Node.js, Express.js, NestJS & MongoDB</span>,
+                and web platforms built with <span className="text-blue-600 font-bold">Next.js, React & Tailwind CSS</span>.
               </p>
               <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
                 Proven experience as a <span className="text-slate-900 dark:text-white font-semibold">Team Lead</span>, handling project architecture,
@@ -323,20 +332,24 @@ const AboutSection = () => (
                 <div className="relative z-10">
                   <div className="text-7xl font-black text-blue-600 dark:text-blue-500 mb-4">5+</div>
                   <div className="text-xl font-extrabold text-slate-900 dark:text-white mb-2 tracking-tight">Years Experience</div>
-                  <div className="text-slate-600 dark:text-slate-400 font-medium mb-6">Building production-grade mobile applications</div>
-                  
-                  <div className="grid grid-cols-3 gap-4 pt-6 border-t border-slate-200 dark:border-slate-800">
+                  <div className="text-slate-600 dark:text-slate-400 font-medium mb-6">Building production-grade mobile and web products</div>
+
+                  <div className="grid grid-cols-4 gap-3 pt-6 border-t border-slate-200 dark:border-slate-800">
                     <div>
-                      <div className="text-3xl font-bold text-blue-600">40+</div>
-                      <div className="text-[11px] font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1">Android Apps</div>
+                      <div className="text-2xl lg:text-3xl font-bold text-blue-600">40+</div>
+                      <div className="text-[10px] lg:text-[11px] font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1">Android</div>
                     </div>
                     <div>
-                      <div className="text-3xl font-bold text-cyan-500">15+</div>
-                      <div className="text-[11px] font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1">iOS Apps</div>
+                      <div className="text-2xl lg:text-3xl font-bold text-cyan-500">15+</div>
+                      <div className="text-[10px] lg:text-[11px] font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1">iOS</div>
                     </div>
                     <div>
-                      <div className="text-3xl font-bold text-slate-700 dark:text-slate-300">10+</div>
-                      <div className="text-[11px] font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1">macOS Apps</div>
+                      <div className="text-2xl lg:text-3xl font-bold text-slate-700 dark:text-slate-300">10+</div>
+                      <div className="text-[10px] lg:text-[11px] font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1">macOS</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl lg:text-3xl font-bold text-blue-600">6+</div>
+                      <div className="text-[10px] lg:text-[11px] font-semibold tracking-wide text-slate-500 dark:text-slate-400 mt-1">Web</div>
                     </div>
                   </div>
                 </div>
@@ -372,6 +385,12 @@ const SkillsSection = () => {
       skills: ['Node.js & Express.js', 'NestJS', 'REST & GraphQL APIs', 'JWT & OAuth Auth', 'Middleware Design', 'CRON Jobs'],
     },
     {
+      title: 'Web Development',
+      icon: Globe,
+      color: 'blue',
+      skills: ['Next.js', 'React & TypeScript', 'Tailwind CSS', 'Responsive UI', 'SEO & Performance', 'Vercel & Netlify'],
+    },
+    {
       title: 'Database & Cloud',
       icon: Database,
       color: 'blue',
@@ -388,11 +407,14 @@ const SkillsSection = () => {
   const techStack = [
     { name: 'Flutter', icon: Smartphone },
     { name: 'Node.js', icon: Server },
+    { name: 'Next.js', icon: Globe },
+    { name: 'React', icon: Layout },
+    { name: 'TypeScript', icon: Cpu },
+    { name: 'Tailwind CSS', icon: Palette },
     { name: 'Firebase', icon: Cloud },
     { name: 'MongoDB', icon: Database },
     { name: 'Git', icon: GitBranch },
     { name: 'UI/UX', icon: Palette },
-    { name: 'Web', icon: Globe },
     { name: 'Payments', icon: CreditCard },
     { name: 'Push Notifications', icon: Bell },
     { name: 'Security', icon: Shield },
@@ -587,14 +609,17 @@ const ProjectsSection = () => {
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
               {iosApps.map((app) => (
-                <a
+                <div
                   key={app.name}
-                  href={app.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-3.5 p-3.5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-blue-600/60 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                  className="group relative flex items-center gap-3.5 p-3.5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-blue-600/60 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
                 >
-                  <div className="relative w-14 h-14 shrink-0">
+                  <a
+                    href={app.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative w-14 h-14 shrink-0"
+                    aria-label={`${app.name} on the ${app.store}`}
+                  >
                     {app.icon ? (
                       <img
                         src={app.icon}
@@ -612,15 +637,84 @@ const ProjectsSection = () => {
                         {app.note}
                       </span>
                     )}
-                  </div>
+                  </a>
                   <div className="min-w-0 flex-1">
-                    <p className="font-bold text-sm leading-tight text-slate-800 dark:text-slate-100 group-hover:text-blue-600 transition-colors truncate">
+                    <p className="font-bold text-sm leading-tight text-slate-800 dark:text-slate-100 truncate">
                       {app.name}
                     </p>
-                    <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-1 flex items-center gap-1">
-                      {app.store}
-                      <ExternalLink size={10} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </p>
+                    <div className="flex items-center gap-2 mt-1.5">
+                      <a
+                        href={app.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors"
+                      >
+                        {app.store}
+                        <ExternalLink size={10} />
+                      </a>
+                      {app.website && (
+                        <a
+                          href={app.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-md bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500 hover:text-white transition-colors text-[10px] font-bold"
+                          title="Visit website"
+                        >
+                          <Globe size={10} />
+                          Web
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Web Projects Section */}
+          <div className="glass rounded-[3rem] p-10 mb-16 border border-blue-600/10">
+            <div className="flex items-center gap-6 mb-10">
+              <div className="p-4 rounded-2xl bg-blue-600/10 text-blue-600">
+                <Globe size={32} />
+              </div>
+              <div>
+                <h3 className="text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-snug">
+                  Web Platforms I Built
+                </h3>
+                <p className="text-slate-500 dark:text-slate-400 text-sm font-semibold mt-2 tracking-wide">
+                  Live web applications running alongside the mobile apps
+                </p>
+              </div>
+            </div>
+            <div className="grid md:grid-cols-2 gap-4">
+              {resumeData.webProjects.map((project) => (
+                <a
+                  key={project.name}
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex flex-col p-5 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-blue-600/60 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                >
+                  <div className="flex items-start justify-between gap-3 mb-3">
+                    <h4 className="font-extrabold text-base text-slate-800 dark:text-slate-100 group-hover:text-blue-600 transition-colors leading-tight">
+                      {project.name}
+                    </h4>
+                    <span className="shrink-0 p-1.5 rounded-lg bg-blue-600/10 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                      <ExternalLink size={14} />
+                    </span>
+                  </div>
+                  <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4 flex-1">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-2.5 py-1 text-[11px] font-semibold tracking-wide bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg"
+                      >
+                        {tag}
+                      </span>
+                    ))}
                   </div>
                 </a>
               ))}
@@ -633,7 +727,7 @@ const ProjectsSection = () => {
               { value: '40+', label: 'Android Apps' },
               { value: '15+', label: 'iOS Apps' },
               { value: '10+', label: 'macOS Apps' },
-              { value: '5+', label: 'Backend Projects' },
+              { value: '6+', label: 'Web Platforms' },
             ].map((stat, index) => (
               <div key={stat.label} className={`text-center p-8 glass rounded-[2rem] border border-blue-600/5 hover:border-blue-600/20 transition-all animate-scale-in opacity-0 stagger-${index + 1}`}>
                 <div className="text-4xl font-bold text-blue-600 dark:text-blue-500 leading-none">{stat.value}</div>

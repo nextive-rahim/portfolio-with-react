@@ -26,6 +26,14 @@ export interface StoreApp {
   url: string;
   store: 'App Store' | 'Play Store' | 'Mac App Store';
   note?: string;
+  website?: string;
+}
+
+export interface WebProject {
+  name: string;
+  url: string;
+  description: string;
+  tags: string[];
 }
 
 export interface SkillCategory {
@@ -54,4 +62,5 @@ export interface ResumeData {
   appLinks: AppLink[];
   strengths: string[];
   iosApps: StoreApp[];
+  webProjects: WebProject[];
 }

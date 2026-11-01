@@ -9,7 +9,7 @@ export const resumeData: ResumeData = {
   phone: "01718663032",
   linkedin: "linkedin.com/in/abdul-rahim-6b09292a0",
   github: "github.com/developer-rahim",
-  summary: "Experienced Senior Flutter developer with 5+ years of mobile expertise and 1+ year backend experience in Node.js/NestJS. Proven leader of cross-functional teams at Nextive Solution, delivering 40+ Android, 15+ iOS and 10+ macOS production apps published on the Play Store, App Store and Mac App Store. Expert in offline-first systems, custom UI/UX, and high-performance architectures.",
+  summary: "Senior Flutter developer and team lead with 5+ years of experience shipping production products across mobile and web. Delivered 40+ Android, 15+ iOS and 10+ macOS apps on the Play Store, App Store and Mac App Store, plus 6+ live web platforms built with Next.js, React and Tailwind CSS. Backend expertise in Node.js, NestJS and MongoDB, with strong ownership of offline-first architecture, custom UI/UX and high-performance systems.",
   coreSkills: [
     {
       title: "Mobile (Flutter/Dart)",
@@ -20,6 +20,10 @@ export const resumeData: ResumeData = {
       skills: ["Node.js", "NestJS", "Express.js", "REST & GraphQL", "MongoDB", "PostgreSQL", "Firebase Cloud Functions", "JWT Auth"]
     },
     {
+      title: "Web Development",
+      skills: ["Next.js", "React & TypeScript", "Tailwind CSS", "Responsive UI", "SEO & Performance", "Vercel & Netlify"]
+    },
+    {
       title: "Optimization",
       skills: ["Advanced Caching (Hive)", "Memory Management", "Image Compression", "Lazy Loading", "CI/CD Pipelines", "App Store/Play Store DevOps"]
     }
@@ -28,11 +32,12 @@ export const resumeData: ResumeData = {
     {
       company: "Nextive Solution, Kawran Bazar, Dhaka",
       location: "Dhaka, Bangladesh",
-      role: "Team Lead – Flutter & Backend",
+      role: "Team Lead – Flutter, Backend & Web",
       period: "2023 – Present",
       bullets: [
-        "Led a team of Flutter & backend developers, managing development lifecycle end-to-end",
+        "Led a team of Flutter, backend & web developers, managing development lifecycle end-to-end",
         "Designed and implemented scalable mobile architectures using Flutter + Node.js/NestJS",
+        "Built 6+ live web platforms with Next.js, React and Tailwind CSS",
         "Conducted code review sessions and enforced clean coding practices",
         "Built high-performing apps using offline-first architecture and advanced caching",
         "Integrated complex APIs, including payment systems and background services",
@@ -121,17 +126,25 @@ export const resumeData: ResumeData = {
   iosApps: [
     { name: "MCQ Boss", icon: "", url: "https://apps.apple.com/us/app/id6820439520", store: "App Store", note: "In Review" },
     { name: "Jony Law School", icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/00/d6/ad/00d6adca-2902-2a2b-f13d-4458a4ca9132/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg", url: "https://apps.apple.com/us/app/jony-law-school/id6757974185", store: "App Store" },
-    { name: "BCS Delta Force", icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f0/a0/f0/f0a0f0d0-bbbf-9fad-187e-567af1cd84dc/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg", url: "https://apps.apple.com/us/app/bcs-delta-force/id6807405949", store: "App Store" },
-    { name: "Karigori Pathsala", icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/96/61/40/96614026-cfbe-39cf-b838-0619e8e1ed11/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg", url: "https://apps.apple.com/us/app/karigori-pathsala/id6754215048", store: "App Store" },
-    { name: "eTestPaper", icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f8/f0/a1/f8f0a14c-47e7-dc0a-7c57-ebc9b991db19/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg", url: "https://apps.apple.com/us/app/etestpaper/id6749287735", store: "App Store" },
+    { name: "BCS Delta Force", icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f0/a0/f0/f0a0f0d0-bbbf-9fad-187e-567af1cd84dc/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg", url: "https://apps.apple.com/us/app/bcs-delta-force/id6807405949", store: "App Store", website: "https://delta-force-web-gamma.vercel.app/" },
+    { name: "Karigori Pathsala", icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/96/61/40/96614026-cfbe-39cf-b838-0619e8e1ed11/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg", url: "https://apps.apple.com/us/app/karigori-pathsala/id6754215048", store: "App Store", website: "https://www.karigoripathsala.com/" },
+    { name: "eTestPaper", icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f8/f0/a1/f8f0a14c-47e7-dc0a-7c57-ebc9b991db19/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg", url: "https://apps.apple.com/us/app/etestpaper/id6749287735", store: "App Store", website: "https://www.etestpaper.net/" },
     { name: "Sahittyapara", icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d6/f1/ca/d6f1ca65-a9e2-7cea-43e5-a2ce802d6391/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg", url: "https://apps.apple.com/us/app/sahittyapara/id6757381951", store: "App Store" },
     { name: "Nayeem's English Care", icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/33/fd/28/33fd2880-8f1a-6f6d-1f6b-8ecbd3b64eab/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg", url: "https://apps.apple.com/us/app/nayeems-english-care/id6748595972", store: "App Store" },
     { name: "Science Platform", icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b2/2a/a7/b22aa7bf-4d2c-f3e1-ce18-d7094e6e4749/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg", url: "https://apps.apple.com/us/app/science-platform/id6748245666", store: "App Store" },
     { name: "Board Books", icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d8/e8/64/d8e86479-c2b4-9b0e-4b2d-83ef9da68880/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg", url: "https://apps.apple.com/us/app/board-books/id6751452947", store: "App Store" },
-    { name: "Admission Assistant", icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c2/ab/49/c2ab49a2-c377-7f49-64e4-6c645735caec/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg", url: "https://apps.apple.com/us/app/admission-assistant/id6749927738", store: "App Store" },
+    { name: "Admission Assistant", icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c2/ab/49/c2ab49a2-c377-7f49-64e4-6c645735caec/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg", url: "https://apps.apple.com/us/app/admission-assistant/id6749927738", store: "App Store", website: "https://www.admissionassistant.com.bd/" },
     { name: "Physics Study BD", icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/06/02/ca/0602ca9b-fa10-db00-e2d4-bc3360a49d27/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg", url: "https://apps.apple.com/us/app/physics-study-bd/id6781135942", store: "App Store" },
-    { name: "Master Class-Bank Job", icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ee/d7/ac/eed7ace3-570f-2529-cc55-dc9faebaeadc/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg", url: "https://apps.apple.com/us/app/master-class-bank-job/id6753141252", store: "App Store" },
-    { name: "Shikkha Squared", icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7f/3a/12/7f3a12e7-f34a-25a3-a5e8-170683ecf2ea/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg", url: "https://apps.apple.com/us/app/shikkha-squared/id6751794182", store: "App Store" },
+    { name: "Master Class-Bank Job", icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ee/d7/ac/eed7ace3-570f-2529-cc55-dc9faebaeadc/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg", url: "https://apps.apple.com/us/app/master-class-bank-job/id6753141252", store: "App Store", website: "https://www.masterclass.com.bd/" },
+    { name: "Shikkha Squared", icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7f/3a/12/7f3a12e7-f34a-25a3-a5e8-170683ecf2ea/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg", url: "https://apps.apple.com/us/app/shikkha-squared/id6751794182", store: "App Store", website: "https://www.shikkhasquared.com/" },
     { name: "English Fantasy", icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/dc/7a/6f/dc7a6f27-0688-86f1-7052-c2abc893ee02/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg", url: "https://apps.apple.com/us/app/english-fantasy/id6761452552", store: "App Store" }
+  ],
+  webProjects: [
+    { name: "BCS Delta Force", url: "https://delta-force-web-gamma.vercel.app/", description: "Web platform for BCS preparation, built to run alongside the mobile app.", tags: ["Next.js", "Web App", "EdTech"] },
+    { name: "Karigori Pathsala", url: "https://www.karigoripathsala.com/", description: "Full learning platform with courses, video classes and online exams.", tags: ["LMS", "Web App", "EdTech"] },
+    { name: "eTestPaper", url: "https://www.etestpaper.net/", description: "Online exam and practice platform for competitive exam candidates.", tags: ["Exam Platform", "Web App", "EdTech"] },
+    { name: "Admission Assistant", url: "https://www.admissionassistant.com.bd/", description: "University admission portal with programs, notices and an online bookstore.", tags: ["Admission Portal", "E-commerce", "EdTech"] },
+    { name: "Shikkha Squared", url: "https://www.shikkhasquared.com/", description: "Squared learning platform with study materials and exam preparation.", tags: ["LMS", "Web App", "EdTech"] },
+    { name: "Master Class — Bank Job", url: "https://www.masterclass.com.bd/", description: "Bank job, BCS and MBA preparation courses with video classes.", tags: ["Course Platform", "Web App", "EdTech"] }
   ]
 };
